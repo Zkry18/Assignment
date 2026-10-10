@@ -11,8 +11,7 @@ void stop(int sig) {
     _exit(0);
 }
 
-int main(void) {
-   /* signal(SIGINT, stop);*/ 
+int main(void) { 
     for(int i=0; i<4; i++){
     int fd[2];
     if (pipe(fd) < 0) { perror("pipe"); exit(1); }
